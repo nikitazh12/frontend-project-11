@@ -12,11 +12,18 @@ export default () => {
 		form: document.querySelector('.rss-form'),
 		input: document.querySelector('.rss-form input'),
 		feedback: document.querySelector('.feedback'),
+		submit: document.querySelector('.rss-form button[type=submit'),
+		feedsBox: document.querySelector('.feeds'),
+		postsBox: document.querySelector('.posts'),
 	};
 	
 	const initState = {
 		feeds: [],
 		posts: [],
+		loadingProcess: {
+			status: 'idle',
+			error: null,
+		},
 		form: {
 			error: null,
 			valid: false,
